@@ -2,7 +2,8 @@
 
 // collect data from html
 const generateButton = document.querySelector(".generate-btn");
-const userGenderInput = document.querySelectorAll("#gender");
+const userGenderInput = document.querySelectorAll("input[name='gender']");
+const displayName = document.querySelector(".text");
 
 const days = [
   "Sunday",
@@ -11,7 +12,7 @@ const days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturn",
+  "Saturday",
 ];
 
 const maleAkanNames = [
@@ -38,23 +39,40 @@ const femaleAkanNames = [
 generateButton.addEventListener("click", (e) => {
   e.preventDefault();
 
+  // call generate names function
+  generateName();
+});
+
+// Name generation.
+let generateName = () => {
   const userDateInput = document.querySelector("#date").value;
   let weekday = new Date(userDateInput); // convert form date to date obj
   let day = weekday.getDay();
-  console.log(maleAkanNames[day]);
+
+  userGenderInput.forEach((gender) => {
+    // console.log(selectedGender);
+    const akanName = () => {
+      let selectedGender = gender.value;
+
+      if(selectedGender === "male")
+        return `Akan name is ${maleAkanNames[day]} and you were born on a ${days[day]}`;
+      return `Akan name is ${femaleAkanNames[day]} and you were born on a ${days[day]}`;
+    };
+    console.log(akanName());
+  });
 
   //   match name
   //   trying random stuff;
-  userGenderInput.forEach((gender) => {
-    // check gender and give name
-    let akanName = () => {
-      let selectedGender = gender.value;
-      if (selectedGender === "male")
-        return `Akan name is ${maleAkanNames[day]} and you were born on a ${days[day]}`;
-      if (selectedGender === "female")
-        return `Akan name is ${femaleAkanNames[day]}`;
-    };
+  // userGenderInput.forEach((gender) => {
+  //   // check gender and give name
+  //   let akanName = () => {
+  //     let selectedGender = gender.value;
+  //     if (selectedGender === "male")
+  //       displayName.innerHTML = `Akan name is ${maleAkanNames[day]} and you were born on a ${days[day]}`;
+  //     if (selectedGender === "female")
+  //       displayName.innerHTML = `Akan name is ${femaleAkanNames[day]} and you were born on a ${days[day]}`;
+  //   };
 
-    console.log(akanName());
-  });
-});
+  //   console.log(akanName());
+  // });
+};
