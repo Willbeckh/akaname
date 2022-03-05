@@ -1,6 +1,9 @@
 "use strict";
 
-// store names and days
+// collect data from html
+const generateButton = document.querySelector(".generate-btn");
+const userGenderInput = document.querySelectorAll("#gender");
+
 const days = [
   "Sunday",
   "Monday",
@@ -8,7 +11,7 @@ const days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday",
+  "Saturn",
 ];
 
 const maleAkanNames = [
@@ -31,40 +34,27 @@ const femaleAkanNames = [
   "Ama",
 ];
 
-//collect data from html
-const dataForm = document.querySelector("form");
-let userDateInput = document.querySelector("#date");
-let userGender = document.querySelector("#gender").value;
-
-//   set btn event
-dataForm.addEventListener("submit", (e) => {
+// // button click event
+generateButton.addEventListener("click", (e) => {
   e.preventDefault();
 
-  //   let dateOfBirth = new Date(userDateInput.value);
-  //   let dayOfWeek = dateOfBirth.getDay();
-  //   console.log(dayOfWeek);
+  const userDateInput = document.querySelector("#date").value;
+  let weekday = new Date(userDateInput); // convert form date to date obj
+  let day = weekday.getDay();
+  console.log(maleAkanNames[day]);
 
-  //   console.log(userDateInput.value);
-  //   console.log(userGender.value);
-  //   let userData = new FormData(dataForm);
+  //   match name
+  //   trying random stuff;
+  userGenderInput.forEach((gender) => {
+    // check gender and give name
+    let akanName = () => {
+      let selectedGender = gender.value;
+      if (selectedGender === "male")
+        return `Akan name is ${maleAkanNames[day]} and you were born on a ${days[day]}`;
+      if (selectedGender === "female")
+        return `Akan name is ${femaleAkanNames[day]}`;
+    };
 
-  //   console.log(userData);
-  generateName();
+    console.log(akanName());
+  });
 });
-
-// create function to get actual data
-let generateName = () => {
-  //   iterate myGender
-
-  for (let g = 0; g < userGender.length; g++) {
-    console.log(userGender[g].value.checked);
-    for (let chk of userGender) {
-      console.log(chk);
-    }
-    //   if(userGender[g].checked) {
-    //       if(userGender[g].value === "male"){
-    //           console.log(userGender[g]);
-    //       }
-    //   }
-  }
-};
