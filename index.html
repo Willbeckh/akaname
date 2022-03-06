@@ -26,43 +26,86 @@
   <body>
     <!-- hero start -->
     <section id="hero" class="">
-      <div class="jumbotron w-75 mx-auto bg-transparent">
+      <div class="jumbotron row w-75 mx-auto bg-transparent align-items-start">
         <h1 class="display-4">Akan names generator.</h1>
-        <p class="lead">
-          Akan names are derived from Ghanian culture. Frequently in Ghana,
-          children are given their first name as a 'day name' which corresponds
-          to the day in the week they were born.
-        </p>
-        <!-- <img src="./images/bg-question.png" class="img-fluid w-50 col" alt="" /> -->
-
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#generator" role="button"
-            >Generate ></a
-          >
-        </p>
+        <div class="banner-text col pt-5">
+          <p class="lead">
+            Akan names are derived from Ghanian culture. Frequently in Ghana,
+            children are given their first name as a 'day name' which
+            corresponds to the day in the week they were born.
+          </p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#form-container" role="button"
+              >Create name ></a
+            >
+          </p>
+        </div>
+        <div class="banner-img col">
+          <img
+            src="./images/bg-question.png"
+            class="img-fluid col h-25"
+            alt=""
+          />
+        </div>
       </div>
     </section>
     <!-- hero end -->
 
     <!-- Form section start -->
-    <section id="generator" class="card">
-      <form action="" id="birth-date">
-        <label for="">DOB:</label>
-        <input type="date" name="date" id="date" />
+    <section id="form-container" class="pt-3">
+      <div class="card mx-auto w-50">
+        <!-- <h4 class="mx-auto p-2">Get your Akan name here:</h4> -->
+        <form id="birth-date" class="row needs-validation">
+          <div class="form-group">
+            <label for="" class="form-label fw-normal fs-4"
+              >Date of birth</label
+            >
+            <input
+              type="date"
+              name="date"
+              id="date"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Please select a valid date.</div>
+          </div>
 
-        <!-- gender input -->
-        <label for="" id="gender-options">Gender</label>
-        <input type="radio" name="gender" value="female" id="gender female" />
-        <label for="">Female</label>
-        <input type="radio" name="gender" value="male" id="gender male" />
-        <label for="">Male</label>
-      </form>
+          <!-- gender input -->
+          <div class="p-3 row form-group">
+            <h3 for="" id="gender-options" class="form-label fs-2">Gender</h3>
+            <div class="single-radio col p-4 w-25">
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                id="gender female"
+                class="form-check-input"
+              />
+              <label for="" class="form-check-label">Female</label>
+            </div>
+            <div class="single-radio col p-4 w-25">
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="gender male"
+                class="form-check-input"
+              />
+              <label for="" class="form-check-label">Male</label>
+            </div>
+          </div>
+        </form>
 
-      <button type="submit" class="generate-btn btn btn-info">Generate ></button>
+        <button type="submit" class="generate-btn btn btn-info w-25 mx-auto">
+          GENERATE
+        </button>
+      </div>
+      <div class="display jumbotron w-75 mx-auto mt-5">
+        <p class="show-name"></p>
+      </div>
     </section>
-    <!-- Form section end -->
 
-    <p class="display-name"></p>
+    <!-- Form section end -->
 
     <script src="./js/script.js"></script>
     <!-- boostrap jjs bundle -->
