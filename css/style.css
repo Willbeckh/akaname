@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #c091f5;
+}
+
+/* hero section style */
+#hero {
+  height: 100vh;
+  background-color: #c091f5;
+}
+.jumbotron {
+}
+
+.img-fluid {
+  position: absolute;
+  top: 0;
+  /* right: 2rem; */
+}
+
+/* form section */
