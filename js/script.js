@@ -52,7 +52,7 @@ let generateName = () => {
     let nameGenerator = () => {
       let userChoice = choice.value; // stores the checked value
 
-      if (userChoice === null) return userChoice; // prevent empty choices of gender
+      if (userChoice === null); // prevent empty choices of gender
       if (userChoice === "male")
         return `Your akan name is ${APP_DATA.maleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
       return `Your Akan name is ${APP_DATA.femaleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
