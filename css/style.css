@@ -13,12 +13,48 @@ body {
   background-color: #c091f5;
 }
 .jumbotron {
+  padding-top: 10%;
+  /* position: relative; */
 }
 
-.img-fluid {
+.banner-text {
+  position: relative;
+}
+
+.banner-img {
   position: absolute;
-  top: 0;
-  /* right: 2rem; */
+}
+
+.btn-primary {
+  margin-top: 20%;
 }
 
 /* form section */
+#form-container {
+  height: 100vh;
+  background-color: #d2b0f8;
+  /* margin: 20px; */
+}
+
+.card {
+  padding: 5% !important;
+  background-color: #7a40bd !important;
+}
+
+input {
+  cursor: pointer;
+}
+
+.single-radio {
+  margin: 10px;
+  padding: 5%;
+  background-color: rgba(138, 136, 136, 0.466);
+}
+
+.img-fluid {
+  width: auto !important;
+}
+
+.display {
+  background-color: #32165E !important;
+}
