@@ -2,7 +2,7 @@
 
 // collect data from html
 const generateButton = document.querySelector(".generate-btn");
-const displayName = document.querySelector(".text");
+const displayName = document.querySelector(".name-container");
 
 const APP_DATA = {
   days: [
@@ -33,11 +33,11 @@ generateButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   // call generate names function
-  generateName();
+  createName();
 });
 
 // Name generation.
-let generateName = () => {
+let createName = () => {
   const userGenderInput = document.querySelectorAll(
     "input[name='gender']:checked"
   ); // gets checked option of radio input
@@ -53,10 +53,11 @@ let generateName = () => {
       let userChoice = choice.value; // stores the checked value
 
       if (userChoice === null); // prevent empty choices of gender
-      if (userChoice === "male")
-        return `Your akan name is ${APP_DATA.maleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
-      return `Your Akan name is ${APP_DATA.femaleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
+      // if (userChoice === "male")
+        displayName.innerText =  `Your akan name is ${APP_DATA.maleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
+      displayName.innerText =  `Your Akan name is ${APP_DATA.femaleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
     };
     console.log(nameGenerator());
   });
 };
+
