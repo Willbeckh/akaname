@@ -17,46 +17,59 @@
   /* position: relative; */
 }
 
-.banner-text {
-  position: relative;
+#hero-text {
+  /* background-image: url("./images/./images/bg-question.png"); */
+  color: #02c5d6;
 }
 
 .banner-img {
-  position: absolute;
+  border-right: #ff9723 4px solid;
+  border-right-width: 10px;
 }
 
-.btn-primary {
+.btn-lg {
   margin-top: 20%;
+  color: #02c6d8;
 }
 
 /* form section */
 #form-container {
   height: 100vh;
-  /* background-color: #593b7acc; */
-  background-color: #b19acebd;
-  /* margin: 20px; */
+  background-color: #6d5683cc;
 }
 
 .card {
-  padding: 5% !important;
-  background-color: #9558B5 !important;
+  padding: 5%;
+  background-color: #9558b5;
 }
 
 input {
   cursor: pointer;
 }
 
+.form-label {
+  color: #fff;
+}
 .single-radio {
   margin: 10px;
   padding: 5%;
   background-color: rgba(138, 136, 136, 0.466);
+  cursor: pointer;
+  border: #02c5d6 1px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.single-radio:hover {
+  background-color: #02c5d6;
 }
 
 .img-fluid {
-  width: auto !important;
+  width: auto;
 }
 
 .display {
-  background-color: #3b295a91 !important;
-  color: antiquewhite !important;
+  background-color: #3b295a91;
+  color: #02c5d6;
+  height: 5%;
 }

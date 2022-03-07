@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- bootstrap stylesheet -->
     <link
@@ -20,32 +19,33 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>Name-gen</title>
   </head>
   <body>
     <!-- hero start -->
     <section id="hero" class="">
-      <div class="jumbotron row w-75 mx-auto bg-transparent align-items-start">
+      <div class="jumbotron row w-75 mx-auto bg-transparent">
+        <!-- align-items-start -->
         <h1 class="display-4 text-warning">Akan names generator.</h1>
-        <div class="banner-text col pt-5">
-          <p class="lead text-light fs-3">
+        <div class="col pt-5">
+          <p id="hero-text" class="lead fw-bold fs-3">
             Akan names are derived from Ghanian culture. Frequently in Ghana,
             children are given their first name as a 'day name' which
             corresponds to the day in the week they were born.
           </p>
           <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#form-container" role="button"
+            <a
+              class="btn btn-outline-warning btn-lg"
+              href="#form-container"
+              role="button"
               >Create name ></a
             >
           </p>
         </div>
         <div class="banner-img col">
-          <img
-            src="./images/bg-question.png"
-            class="img-fluid col h-25"
-            alt=""
-          />
+          <img src="./images/bg-question.png" class="img-fluid" alt="" />
         </div>
       </div>
     </section>
@@ -54,8 +54,7 @@
     <!-- Form section start -->
     <section id="form-container" class="pt-3">
       <div class="card mx-auto w-50">
-        <!-- <h4 class="mx-auto p-2">Get your Akan name here:</h4> -->
-        <form id="birth-date" class="row needs-validation">
+        <form id="form" class="row needs-validation">
           <div class="form-group">
             <label for="" class="form-label fw-normal fs-4"
               >Date of birth</label
@@ -72,8 +71,8 @@
 
           <!-- gender input -->
           <div class="p-3 row form-group">
-            <h3 for="" id="gender-options" class="form-label fs-2">Gender</h3>
-            <div class="single-radio col p-4 w-25">
+            <h3 for="" id="gender-options" class="form-label fs-4">Gender</h3>
+            <div class="single-radio col p-4">
               <input
                 type="radio"
                 name="gender"
@@ -81,9 +80,9 @@
                 id="gender female"
                 class="form-check-input"
               />
-              <label for="" class="form-check-label">Female</label>
+              <label for="" class="form-check-label text-light fw-bold">Female</label>
             </div>
-            <div class="single-radio col p-4 w-25">
+            <div class="single-radio col p-4">
               <input
                 type="radio"
                 name="gender"
@@ -91,17 +90,19 @@
                 id="gender male"
                 class="form-check-input"
               />
-              <label for="" class="form-check-label">Male</label>
+              <label for="" class="form-check-label text-light fw-bold">Male</label>
             </div>
           </div>
+          <button class="generate-btn btn btn-info w-25 mx-auto">
+            GENERATE
+          </button>
         </form>
-
-        <button type="submit" class="generate-btn btn btn-info w-25 mx-auto">
-          GENERATE
-        </button>
       </div>
-      <div class="display jumbotron w-75 mx-auto mt-5">
-        <p class="name-container fs-3 mx-auto"></p>
+      <div class="display rounded w-75 h-auto mx-auto mt-5">
+        <p class="akan-name-wrapper fs-3 p-5 text-center fw-bold">
+          Your Akan name is "<span class="akan-name"></span>" & You were born on
+          a "<span class="birthday"></span>"
+        </p>
       </div>
     </section>
 
