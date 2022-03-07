@@ -1,27 +1,22 @@
 "use strict";
 
 // collect data from html
-// const generateButton = document.querySelector(".generate-btn");
 const formData = document.querySelector("#form");
-const displayName = document.querySelector(".akan-name");
-
 const days = [
   "Sunday 😇",
-  "Monday 🙂",
-  "Tuesday 😉",
+  "Monday",
+  "Tuesday",
   "Wednesday 🤩",
-  "Thursday 😂",
-  "Friday 😛",
-  "Saturday 😎",
+  "Thursday🆒",
+  "Friday",
+  "Saturday😎",
 ];
-
 const akanNames = {
-  male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
-
   female: ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"],
+  male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
 };
 
-// Name generation.
+// validating forms
 const validateData = (submit) => {
   submit.preventDefault();
 
@@ -30,22 +25,22 @@ const validateData = (submit) => {
 
   const userDateInput = new Date(date);
   if (new Date() - userDateInput < 0)
-    return alert(
-      "Oops, Looks like you're a time traveller.🙃 provide a date past today."
-    );
+    return alert("Oops, Looks like you're a time traveller. Pick a past date.");
 
   const userGenderInput = document.querySelector(
     "input[name='gender']:checked"
   );
 
-  if (userGenderInput === null) return alert("Please select Gender.");
-
+  if (userGenderInput === null) return alert("Please select a gender.");
   const day = userDateInput.getDay();
-  createAkanName(userGenderInput.value, day);
+  formData.reset(); // reset form 
+const createAkanName = (genderChoice, dayOfweek) =>
+  akanNames[genderChoice][dayOfweek];
 
-  formData.reset();
+// displays feedback to user.
+const nameOutput = (akanName, birthday) => {
+  document.querySelector(".akan-name").innerText = akanName;
+  return (document.querySelector(".birthday").innerText = days[birthday]);
 };
-
-const createAkanName = (gender, dayOfWeek) => akanNames[gender][dayOfWeek];
 
 formData.addEventListener("submit", validateData);
