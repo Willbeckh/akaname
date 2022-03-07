@@ -24,8 +24,13 @@ To setup this project:
   - INPUT: user picks date
   - INPUT: user selects gender.
   - OUTPUT: generates and displays an akan name corresponding to details provided.
-
-3. Resets form Input upon validation.
+3. Alerts an error message when user provides a future date.
+  - INPUT: user picks a date ahead of current date.
+  - OUTPUT: alerts error message to user and request an appropriate date.
+4. Displays error message when user tries to submit without filling in the details.
+  - INPUT: no details provided, example: date and gender.
+  - OUTPUT: please pick a date and select a gender.
+6. Resets form Input upon validation.
   - INPUT: user clicks generate button.
   - OUTPUT: resets form and display Akan name.
 
@@ -37,10 +42,10 @@ follow below steps:
 - Make your desired changes.
 - Stage and commit changes to your branch
 - Push the changes/updates to remote branch (git push ft-update-design);
+- Open a PR and request review.
 
 ### Known bugs.
-Appropriate form validation for date picker.
-- If you catch any bug, open a new issue and provide a description.
+- No current Known bugs, if you catch any bug, open a new issue and provide a description.
 
 ***Live site :*** https://willbeckh.github.io/akaname/
 
