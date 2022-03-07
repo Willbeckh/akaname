@@ -33,7 +33,10 @@ const validateData = (submit) => {
 
   if (userGenderInput === null) return alert("Please select a gender.");
   const day = userDateInput.getDay();
-  formData.reset(); // reset form 
+  formData.reset(); // reset form
+  return nameOutput(createAkanName(userGenderInput.value, day), day);
+};
+
 const createAkanName = (genderChoice, dayOfweek) =>
   akanNames[genderChoice][dayOfweek];
 
@@ -42,5 +45,4 @@ const nameOutput = (akanName, birthday) => {
   document.querySelector(".akan-name").innerText = akanName;
   return (document.querySelector(".birthday").innerText = days[birthday]);
 };
-
 formData.addEventListener("submit", validateData);
