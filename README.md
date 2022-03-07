@@ -45,7 +45,7 @@ follow below steps:
 - Open a PR and request review.
 
 ### Known bugs.
-- No current Known bugs, if you catch any bug, open a new issue and provide a description.
+- No current Known bugs, if you catch any bug, open a new [issue](https://github.com/Willbeckh/akaname/issues) and provide a description.
 
 ***Live site :*** https://willbeckh.github.io/akaname/
 
