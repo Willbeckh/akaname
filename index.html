@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- bootstrap stylesheet -->
     <link
@@ -20,32 +19,33 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>Name-gen</title>
   </head>
   <body>
     <!-- hero start -->
     <section id="hero" class="">
-      <div class="jumbotron row w-75 mx-auto bg-transparent align-items-start">
+      <div class="jumbotron row w-75 mx-auto bg-transparent">
+        <!-- align-items-start -->
         <h1 class="display-4 text-warning">Akan names generator.</h1>
-        <div class="banner-text col pt-5">
-          <p class="lead text-light fs-3">
+        <div class="col pt-5">
+          <p id="hero-text" class="lead fw-bold fs-3">
             Akan names are derived from Ghanian culture. Frequently in Ghana,
             children are given their first name as a 'day name' which
             corresponds to the day in the week they were born.
           </p>
           <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#form-container" role="button"
+            <a
+              class="btn btn-outline-warning btn-lg"
+              href="#form-container"
+              role="button"
               >Create name ></a
             >
           </p>
         </div>
         <div class="banner-img col">
-          <img
-            src="./images/bg-question.png"
-            class="img-fluid col h-25"
-            alt=""
-          />
+          <img src="./images/bg-question.png" class="img-fluid" alt="" />
         </div>
       </div>
     </section>
@@ -73,7 +73,7 @@
           <!-- gender input -->
           <div class="p-3 row form-group">
             <h3 for="" id="gender-options" class="form-label fs-2">Gender</h3>
-            <div class="single-radio col p-4 w-25">
+            <div class="single-radio col p-4">
               <input
                 type="radio"
                 name="gender"
@@ -83,7 +83,7 @@
               />
               <label for="" class="form-check-label">Female</label>
             </div>
-            <div class="single-radio col p-4 w-25">
+            <div class="single-radio col p-4">
               <input
                 type="radio"
                 name="gender"
@@ -101,7 +101,7 @@
         </button>
       </div>
       <div class="display jumbotron w-75 mx-auto mt-5">
-        <p class="name-container fs-3 mx-auto"></p>
+        <p class="name-container fs-3 fw-bold mx-auto"></p>
       </div>
     </section>
 
