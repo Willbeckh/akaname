@@ -2,59 +2,62 @@
 
 // collect data from html
 const generateButton = document.querySelector(".generate-btn");
-const userGenderInput = document.querySelectorAll("#gender");
+const displayName = document.querySelector(".name-container");
 
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturn",
-];
+const APP_DATA = {
+  days: [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ],
 
-const maleAkanNames = [
-  "Kwasi",
-  "Kwadwo",
-  "Kwabena",
-  "Kwaku",
-  "Yaw",
-  "Kofi",
-  "Kwame",
-];
+  maleAkanNames: [
+    "Kwasi",
+    "Kwadwo",
+    "Kwabena",
+    "Kwaku",
+    "Yaw",
+    "Kofi",
+    "Kwame",
+  ],
 
-const femaleAkanNames = [
-  "Akosua",
-  "Adwoa",
-  "Abenaa",
-  "Akua",
-  "Yaa",
-  "Afua",
-  "Ama",
-];
+  femaleAkanNames: ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"],
+};
 
 // // button click event
 generateButton.addEventListener("click", (e) => {
   e.preventDefault();
 
-  const userDateInput = document.querySelector("#date").value;
-  let weekday = new Date(userDateInput); // convert form date to date obj
-  let day = weekday.getDay();
-  console.log(maleAkanNames[day]);
-
-  //   match name
-  //   trying random stuff;
-  userGenderInput.forEach((gender) => {
-    // check gender and give name
-    let akanName = () => {
-      let selectedGender = gender.value;
-      if (selectedGender === "male")
-        return `Akan name is ${maleAkanNames[day]} and you were born on a ${days[day]}`;
-      if (selectedGender === "female")
-        return `Akan name is ${femaleAkanNames[day]}`;
-    };
-
-    console.log(akanName());
-  });
+  // call generate names function
+  createName();
 });
+
+// Name generation.
+let createName = () => {
+  const userGenderInput = document.querySelectorAll(
+    "input[name='gender']:checked"
+  ); // gets checked option of radio input
+
+  const userDateInput = document.querySelector("#date").value;
+  let weekday = new Date(userDateInput); // convert from string to date obj
+  let day = weekday.getDay();
+  // console.log(day);
+
+  // loop thru object and match name
+  userGenderInput.forEach((choice) => {
+    let nameGenerator = () => {
+      let userChoice = choice.value; // stores the checked value
+
+      if (userChoice === null); // prevent empty choices of gender
+      // if (userChoice === "male")
+        displayName.innerText =  `Your akan name is ${APP_DATA.maleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
+      displayName.innerText =  `Your Akan name is ${APP_DATA.femaleAkanNames[day]} and u were born on a ${APP_DATA.days[day]}`;
+    };
+    console.log(nameGenerator());
+  });
+};
+
