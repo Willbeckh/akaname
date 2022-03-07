@@ -54,7 +54,6 @@
     <!-- Form section start -->
     <section id="form-container" class="pt-3">
       <div class="card mx-auto w-50">
-        <!-- <h4 class="mx-auto p-2">Get your Akan name here:</h4> -->
         <form id="form" class="row needs-validation">
           <div class="form-group">
             <label for="" class="form-label fw-normal fs-4"
@@ -99,8 +98,11 @@
           </button>
         </form>
       </div>
-      <div class="display jumbotron w-75 mx-auto mt-5">
-        <p class="akan-name fs-3 fw-bold mx-auto"></p>
+      <div class="display rounded w-75 h-auto mx-auto mt-5">
+        <p class="akan-name-wrapper fs-3 p-5 text-center fw-bold">
+          Your Akan name is "<span class="akan-name"></span>" & You were born on
+          a "<span class="birthday"></span>"
+        </p>
       </div>
     </section>
 
@@ -114,3 +116,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
+</html>
