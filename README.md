@@ -10,7 +10,7 @@ Akan names are derived in the Ghanaian culture where kids are named according to
 ## Technologies used
 - HTML & CSS
 - Bootstrap
-- JaaScript
+- JavaScript
 
 ## Setup instructions
 To setup this project:
