@@ -7,6 +7,10 @@ The user provides a date of birth and selects their gender, and the application 
 Akan names are derived in the Ghanaian culture where kids are named according to the day they were orn on.
 - The applications [figma](https://www.figma.com/file/MWuud7FUj1btIO6vjdlrhD/Akan_name-Design?node-id=2%3A2) design.
 
+![Landing page](./images/landing-page.png)
+
+![second page](./images/form-page.png)
+
 ## Technologies used
 - HTML & CSS
 - Bootstrap
