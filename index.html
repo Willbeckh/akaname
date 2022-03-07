@@ -35,7 +35,10 @@
             corresponds to the day in the week they were born.
           </p>
           <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#form-container" role="button"
+            <a
+              class="btn btn-primary btn-lg"
+              href="#form-container"
+              role="button"
               >Create name ></a
             >
           </p>
@@ -55,7 +58,7 @@
     <section id="form-container" class="pt-3">
       <div class="card mx-auto w-50">
         <!-- <h4 class="mx-auto p-2">Get your Akan name here:</h4> -->
-        <form id="birth-date" class="row needs-validation">
+        <form id="form" class="row needs-validation">
           <div class="form-group">
             <label for="" class="form-label fw-normal fs-4"
               >Date of birth</label
@@ -94,11 +97,10 @@
               <label for="" class="form-check-label">Male</label>
             </div>
           </div>
+          <button class="generate-btn btn btn-info w-25 mx-auto">
+            GENERATE
+          </button>
         </form>
-
-        <button type="submit" class="generate-btn btn btn-info w-25 mx-auto">
-          GENERATE
-        </button>
       </div>
       <div class="display jumbotron w-75 mx-auto mt-5">
         <p class="name-container fs-3 mx-auto"></p>
